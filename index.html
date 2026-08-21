@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+   <title>Conhecendo o Meio Ambiente</title>
+
+
+   <style>
+
+
+       header {
+           background-color: #1769aa;
+           color: white;
+           text-align: center;
+           max-width: 800px;
+           margin: 0 auto;
+           border: 5px solid #0c0303;
+           padding: 16px;
+       }
+
+
+       main {
+           background-color: #fdfdfd;
+           color: #160505;
+           max-width: 800px;
+           margin: 0 auto;
+           padding: 16px;
+       }
+
+
+       article {
+           display: flex;
+           margin-bottom: 20px;
+           border: 2px solid #cccccc;
+           padding: 10px;
+       }
+
+
+       img {
+           width: 200px;
+           height: 200px;
+       }
+
+
+       .autor {
+           font-weight: bold;
+       }
+
+
+       button {
+           width: 80px;
+           height: 40px;
+           border: 1px solid #0c0303;
+       }
+
+
+   </style>
+</head>
+
+
+<body>
+
+
+   <header>
+
+
+       <h1>Conhecendo o Meio Ambiente</h1>
+       <p>Pequenas atitudes fazem a diferença!</p>
+
+
+    </header>
+ 
+ 
+    <main>
+ 
+ 
+        <article>
+ 
+ 
+            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e" alt="Natureza">
+ 
+ 
+            <div>
+ 
+ 
+                <h2>Cuidar da natureza</h2>
+ 
+ 
+                <p class="autor">Por: Turma do 1º Ano</p>
+ 
+ 
+                <p>A natureza é importante para a nossa vida.</p>
+ 
+ 
+                <button>❤️<span>0</span></button>
+ 
+ 
+                <button>💧<span>0</span></button>
+ 
+ 
+            </div>
+ 
+ 
+        </article>
+ 
+ 
+ 
+ 
+        <article>
+ 
+ 
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e" alt="Floresta">
+ 
+ 
+            <div>
+ 
+ 
+                <h2>Preservar o meio ambiente</h2>
+
+
+                <p class="autor">Por: Turma do 1º Ano</p>
+
+
+                <p>Todos podemos ajudar a preservar o meio ambiente.</p>
+ 
+ 
+                <button>❤️<span>0</span></button>
+ 
+ 
+                <button>💧<span>0</span></button>
+ 
+ 
+            </div>
+ 
+ 
+        </article>
+ 
+ 
+ 
+ 
+        <article>
+ 
+ 
+            <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7" alt="Paisagem">
+ 
+ 
+            <div>
+ 
+ 
+                <h2>Pequenas atitudes</h2>
+ 
+ 
+                <p class="autor">Por: Turma do 1º Ano</p>
+ 
+ 
+                <p>Pequenas atitudes podem ajudar o nosso planeta.</p>
+ 
+ 
+                <button>❤️<span>0</span></button>
+ 
+ 
+                <button>💧<span>0</span></button>
+ 
+ 
+            </div>
+ 
+ 
+        </article>
+ 
+ 
+        <article>
+
+
+            <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e" alt="Paisagem natural">
+ 
+ 
+            <div>
+ 
+ 
+                <h2>O planeta precisa de nós</h2>
+ 
+ 
+                <p class="autor">Por: Turma do 1º Ano</p>
+ 
+ 
+                <p>Cuidar do planeta é responsabilidade de todos.</p>
+ 
+ 
+                <button>❤️<span>0</span></button>
+ 
+ 
+                <button>💧<span>0</span></button>
+ 
+ 
+            </div>
+ 
+ 
+        </article>
+ 
+ 
+ 
+ 
+        <article>
+ 
+ 
+            <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b" alt="Natureza">
+ 
+ 
+            <div>
+ 
+ 
+                <h2>Um futuro melhor</h2>
+ 
+ 
+                <p class="autor">Por: Turma do 1º Ano</p>
+ 
+ 
+                <p>As nossas escolhas podem ajudar a construir um futuro melhor.</p>
+ 
+ 
+                <button>❤️<span>0</span></button>
+
+
+                <button>💧<span>0</span></button>
+
+
+            </div>
+ 
+ 
+        </article>
+ 
+ 
+ 
+ 
+        <article>
+ 
+ 
+            <img src="https://images.unsplash.com/photo-1448375240586-882707db888b" alt="Floresta">
+ 
+ 
+            <div>
+ 
+ 
+                <h2>Faça sua parte!</h2>
+ 
+ 
+                <p class="autor">Por: Turma do 1º Ano</p>
+ 
+ 
+                <p>Comece hoje com pequenas atitudes.</p>
+ 
+ 
+                <button>❤️<span>0</span></button>
+ 
+ 
+                <button>💧<span>0</span></button>
+ 
+ 
+            </div>
+ 
+ 
+        </article>
+ 
+ 
+    </main>
+ 
+ 
+    <script>
+ 
+ 
+        const botoes = document.querySelectorAll("button");
+ 
+ 
+       botoes.forEach(function (botao) {
+        let curtiu = false;
+
+
+botao.addEventListener("click", botaoClicado);
+
+
+function botaoClicado() {
+console.log("fui clicado");
+let texto = botao.querySelector("span");
+
+
+if (curtiu === false) {
+texto.textContent++;
+curtiu = true;
+} else {
+texto.textContent--;
+curtiu = false;
+}
+}
+});
+
+
+   </script>
+
+
+</body>
+
+
+</html>
+    
